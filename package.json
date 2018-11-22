@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/fdgio/cube-react/issues"
   },
-  "homepage": "https://github.com/fdgio/cube-react#readme"
+  "homepage": "https://github.com/fdgio/cube-react#readme",
+  "devDependencies": {
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "1.15.2"
+  }
 }
