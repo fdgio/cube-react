@@ -14,6 +14,9 @@ module.exports = {
         path.resolve(__dirname, '../node_modules'),
       ],
       loader: 'ts-loader',
+    }, {
+      test: /\.s?css/,
+      use: ['style-loader', 'css-loader', 'sass-loader']
     }]
   },
   resolve: {
