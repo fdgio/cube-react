@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 # Created by https://www.gitignore.io/api/node,macos,visualstudiocode
+=======
+# Created by https://www.gitignore.io/api/macos,node
+# Edit at https://www.gitignore.io/?templates=macos,node
+>>>>>>> feat: :rocket: Initital commit
 
 ### macOS ###
 # General
@@ -121,3 +126,9 @@ dist
 package-lock.json
 lib
 .vscode
+# FuseBox cache
+.fusebox/
+
+# End of https://www.gitignore.io/api/macos,node
+
+lib
