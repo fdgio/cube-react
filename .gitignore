@@ -119,7 +119,6 @@ typings/
 ##
 
 dist
-package-lock.json
 lib
 .vscode
 # FuseBox cache

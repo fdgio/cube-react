@@ -1,6 +1,6 @@
 {
-  "name": "cube-react",
-  "version": "1.0.0",
+  "name": "@fdg/cube-react",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
