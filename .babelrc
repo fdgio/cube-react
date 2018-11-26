@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["@babel/preset-env"]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-object-rest-spread"],
+    ["no-debugging", {
+      "console": true,
+      "debugger": true,
+      "alert": true
+    }]
+  ]
+}

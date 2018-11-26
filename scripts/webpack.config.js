@@ -13,10 +13,13 @@ module.exports = {
       exclude: [
         path.resolve(__dirname, '../node_modules'),
       ],
-      loader: 'ts-loader',
+      loader: ['babel-loader', 'awesome-typescript-loader'],
     }, {
       test: /\.s?css/,
       use: ['style-loader', 'css-loader', 'sass-loader']
+    }, {
+      test: /\.styl$/,
+      use: ['style-loader', 'css-loader', 'stylus-loader']
     }]
   },
   resolve: {
