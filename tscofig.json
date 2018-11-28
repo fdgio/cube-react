@@ -19,7 +19,17 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      "classnames"
+    ]
   },
   "include": [
     "src/**/*"
