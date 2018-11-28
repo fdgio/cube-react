@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
@@ -19,11 +20,20 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader']
     }, {
       test: /\.styl$/,
-      use: ['style-loader', 'css-loader', 'stylus-loader']
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
     }]
   },
   resolve: {
     extensions: ['.ts', '.js', '.jsx', '.tsx']
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'cube-react.css'
+    })
+  ],
+  externals: {
+    react: 'react',
+    "react-dom": 'react-dom'
+  }
 };
