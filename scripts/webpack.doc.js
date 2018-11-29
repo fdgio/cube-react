@@ -8,7 +8,8 @@ module.exports = {
   entry: path.join(__dirname, '../site/index.tsx'),
   output: {
     filename: 'cube-react.doc.js',
-    path: path.resolve(__dirname, '../site')
+    path: path.resolve(__dirname, '../site/dist'),
+    publicPath: 'dist'
   },
   module: {
     rules: [{
@@ -24,11 +25,14 @@ module.exports = {
       ],
       loader: ['babel-loader']
     }, {
-      test: /\.s?css/,
-      loader: ['css-loader', 'sass-loader']
+      test: /\.s?css$/,
+      loader: ['style-loader', 'css-loader', 'sass-loader']
     }, {
       test: /\.styl$/,
-      loader: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
+      loader: ['style-loader', 'css-loader', 'stylus-loader']
+    }, {
+      test: /\.(png|jpg|gif|woff|svg|eot|ttf)$/,
+      use: ['file-loader']
     }]
   },
   resolve: {

@@ -16,8 +16,8 @@ module.exports = {
       ],
       loader: ['babel-loader', 'awesome-typescript-loader'],
     }, {
-      test: /\.s?css/,
-      use: ['style-loader', 'css-loader', 'sass-loader']
+      test: /\.s?css$/,
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
     }, {
       test: /\.styl$/,
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
