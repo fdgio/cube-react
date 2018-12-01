@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Document from './pages/Documents';
 
 import 'normalize.css';
+import 'github-markdown-css';
 import './index.scss';
 export default class App extends React.Component<{}, any> {
 	render() {
