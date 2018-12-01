@@ -12,7 +12,6 @@ export default class App extends React.Component<{}, any> {
 			<Router>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/document" component={Document} />
 					<Route path="/document/:component" component={Document} />
 				</Switch>
 			</Router>

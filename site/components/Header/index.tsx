@@ -15,7 +15,7 @@ export default class Header extends PureComponent {
 								<Link to="/">首页</Link>
 							</li>
 							<li>
-								<Link to="/document">文档</Link>
+								<Link to="/document/button">文档</Link>
 							</li>
 						</ul>
 					</nav>
