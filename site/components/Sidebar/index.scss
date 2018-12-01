@@ -1,0 +1,19 @@
+.sidebar {
+  width: 180px;
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  border-right: 1px solid #eee;
+
+  ul li {
+    line-height: 32px;
+    height: 32px;
+    font-size: 16px;
+    padding-left: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
