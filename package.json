@@ -41,9 +41,7 @@
     "husky": "^1.2.0",
     "markdown-loader": "^4.0.0",
     "mini-css-extract-plugin": "^0.4.5",
-    "node-sass": "^4.10.0",
     "prettier": "^1.15.2",
-    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
@@ -59,6 +57,10 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
   "dependencies": {
     "@types/react": "^16.7.7",
     "@types/react-dom": "^16.0.10",
@@ -68,8 +70,6 @@
     "highlight-ts": "^9.12.1-1",
     "highlight.js": "^9.13.1",
     "normalize.css": "^8.0.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
     "react-markdown": "^4.0.4",
     "react-router-dom": "^4.3.1"
   }
