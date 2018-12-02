@@ -7,7 +7,7 @@ import Header from './../../components/Header';
 import Sidebar from './../../components/Sidebar';
 import components from './../../componentConfig';
 
-import './index.scss';
+import './index.styl';
 export default class Document extends React.Component<any & RouteProps, any> {
 	componentDidMount() {
 		const codes = document.querySelectorAll('.main-content pre code');

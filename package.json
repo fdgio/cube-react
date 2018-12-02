@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --config scripts/webpack.config.js",
     "doc": "webpack-dev-server --config scripts/webpack.doc.js",
-    "doc:dev": "cross-env BABEL_ENV=dev webpack-dev-server --config scripts/webpack.doc.js"
+    "doc:dev": "cross-env BABEL_ENV=dev webpack-dev-server --config scripts/webpack.doc.js",
+    "example": "cross-env BABEL_ENV=dev webpack-dev-server --config scripts/webpack.example.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,8 @@
     "prettier": "^1.15.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",

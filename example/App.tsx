@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Home from './pages/Home';
+import Components from './pages/Components';
+
 export default class App extends React.Component<{}, any> {
 	render() {
 		return (
 			<Router>
 				<Switch>
-					<Route exact path="/" />
-					<Route path="/example/:component" />
+					<Route exact path="/" component={Home} />
+					<Route path="/example/:component" component={Components} />
 				</Switch>
 			</Router>
 		);

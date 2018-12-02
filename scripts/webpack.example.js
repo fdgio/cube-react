@@ -5,11 +5,11 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, '../site/index.tsx'),
+  entry: path.join(__dirname, '../example/index.tsx'),
   output: {
     filename: 'cube-react.doc.js',
-    path: path.resolve(__dirname, '../site/dist'),
-    publicPath: '/'
+    path: path.resolve(__dirname, '../example/dist'),
+    publicPath: 'dist'
   },
   module: {
     rules: [{
@@ -25,8 +25,8 @@ module.exports = {
       ],
       loader: ['babel-loader']
     }, {
-      test: /\.css$/,
-      loader: ['style-loader', 'css-loader']
+      test: /\.s?css$/,
+      loader: ['style-loader', 'css-loader', 'sass-loader']
     }, {
       test: /\.styl$/,
       loader: ['style-loader', 'css-loader', 'stylus-loader']
@@ -35,7 +35,7 @@ module.exports = {
       use: ['file-loader']
     }, {
       test: /\.md$/,
-      use: ['html-loader', 'markdown-loader']
+      use: ['raw-loader']
     }]
   },
   resolve: {
@@ -54,8 +54,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '../site'),
     compress: true,
-    port: 10000,
-    hot: true,
-    historyApiFallback: true
+    port: 11000,
+    hot: true
   }
 };

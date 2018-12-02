@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import components from './../../componentConfig';
 
-import './index.scss';
+import './index.styl';
 
 export default class Sidebar extends React.Component<any, any> {
 	render() {
