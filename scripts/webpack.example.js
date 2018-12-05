@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: 'cube-react.doc.js',
     path: path.resolve(__dirname, '../example/dist'),
-    publicPath: 'dist'
+    publicPath: '/'
   },
   module: {
     rules: [{
@@ -25,20 +25,26 @@ module.exports = {
       ],
       loader: ['babel-loader']
     }, {
-      test: /\.s?css$/,
+      test: /\.scss$/,
       loader: ['style-loader', 'css-loader', 'sass-loader']
     }, {
-      test: /\.styl$/,
+      test: /\.(styl|css)$/,
       loader: ['style-loader', 'css-loader', 'stylus-loader']
     }, {
       test: /\.(png|jpg|gif|woff|svg|eot|ttf)$/,
       use: ['file-loader']
     }, {
       test: /\.md$/,
-      use: ['raw-loader']
+      use: [{
+        loader: path.resolve(__dirname, '../loader/react-markdown-code-loader')
+      }],
+      // use: ['raw-loader']
     }]
   },
   resolve: {
+    alias: {
+      'cube-react': process.cwd()
+    },
     extensions: ['.ts', '.js', '.jsx', '.tsx', '.styl', '.scss', '.css']
   },
   devtool: 'source-map',
@@ -48,13 +54,14 @@ module.exports = {
       filename: 'cube-react.doc.css'
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../site/index.html')
+      template: path.resolve(__dirname, '../example/index.html')
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, '../site'),
+    contentBase: path.join(__dirname, '../example'),
     compress: true,
     port: 11000,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   }
 };
