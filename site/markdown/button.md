@@ -1,6 +1,6 @@
 ## button
 
-> ---render start
+
 ```js
 import React from 'React';
 
@@ -12,4 +12,3 @@ class Demo extends React.component{
 
 export default Demo;
 ```
-> ---render end
