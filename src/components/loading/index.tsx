@@ -18,7 +18,7 @@ class Button extends React.Component<LoadingProps, any> {
 		return (
 			<div className="cube-loading">
 				<span className="cube-loading-spinners" style={style}>
-					{new Array(12).map(() => <i className="cube-loading-spinner" />)}
+					{Array.from({ length: 12 }).map(() => <i className="cube-loading-spinner" />)}
 				</span>
 			</div>
 		);
