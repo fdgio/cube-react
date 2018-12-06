@@ -91,7 +91,7 @@ export default class popup extends React.Component<PopupProps, any> {
 					{this.props.children}
 				</div>
 				<div className={`cube-popup-container ${containerClass}`}>
-					<div className="cube-popup-content" dangerouslySetInnerHTML={{ __html: content }} />;
+					<div className="cube-popup-content" dangerouslySetInnerHTML={{ __html: content }} />
 				</div>
 			</div>
 		);
