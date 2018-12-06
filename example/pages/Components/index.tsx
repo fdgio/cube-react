@@ -7,9 +7,10 @@ export default class Components extends React.Component<any & RouteProps, any> {
 	render() {
 		const component = utils.capitalize(this.props.match.params.component) + 'Page';
 		if (Pages[component]) {
+			const Page = Pages[component];
 			return (
 				<div className="container">
-					<ButtonPage />
+					<Page />
 				</div>
 			);
 		} else {
