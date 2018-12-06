@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import './index.styl';
 
-export interface ButtonProps {
+export interface BasicProps {
 	icon?: string;
 	active?: boolean;
 	disabled?: boolean;
@@ -11,7 +11,10 @@ export interface ButtonProps {
 	outline?: boolean;
 	light?: boolean;
 	type?: string;
+	onClick?: (e?: MouseEvent) => void;
 }
+
+type ButtonProps = React.ButtonHTMLAttributes<{}> & BasicProps;
 
 class Button extends React.Component<ButtonProps, any> {
 	static defaultProps = {
@@ -22,12 +25,13 @@ class Button extends React.Component<ButtonProps, any> {
 		primary: false,
 		outline: false,
 		light: false,
-		type: 'button'
+		type: 'button',
+		onClick: () => {}
 	};
 
 	render() {
 		const { props } = this;
-		const { icon, active, disabled, inline, primary, outline, light, type } = props;
+		const { icon, active, disabled, inline, primary, outline, light, type, onClick } = props;
 		const classes = classnames({
 			'cube-btn_active': active,
 			'cube-btn_disabled': disabled,
@@ -38,8 +42,9 @@ class Button extends React.Component<ButtonProps, any> {
 			'cube-btn-light': light
 		});
 		return (
-			<button className={`${classes} cube-btn`} type={type}>
+			<button className={`${classes} cube-btn`} type={type} onClick={(e) => !disabled && onClick(e)}>
 				{icon && <i className={icon} />}
+				{this.props.children}
 			</button>
 		);
 	}
