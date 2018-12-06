@@ -33,12 +33,6 @@ module.exports = {
     }, {
       test: /\.(png|jpg|gif|woff|svg|eot|ttf)$/,
       use: ['file-loader']
-    }, {
-      test: /\.md$/,
-      use: [{
-        loader: path.resolve(__dirname, '../loader/react-markdown-code-loader')
-      }],
-      // use: ['raw-loader']
     }]
   },
   resolve: {
