@@ -1,6 +1,8 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
+import './index.styl';
+
 interface BasicProps {
 	type?: string;
 	mask?: boolean;
@@ -53,6 +55,24 @@ export default class popup extends React.Component<PopupProps, any> {
 			return <div className="cube-popup-content">{this.props.children}</div>;
 		} else {
 			return <div className="cube-popup-content" dangerouslySetInnerHTML={{ __html: content }} />;
+		}
+	}
+
+	componentDidMount() {
+		const visible = this.props.visible;
+		debugger;
+		if (visible) {
+			this.show();
+		} else {
+			this.hide();
+		}
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.visible) {
+			this.show();
+		} else {
+			this.hide();
 		}
 	}
 
