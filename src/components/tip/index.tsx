@@ -11,6 +11,7 @@ export interface BasicProps {
 	visible?: boolean;
 	onClose?: () => void;
 	onClick?: () => void;
+	style?: object;
 }
 
 type TipProps = BasicProps;
@@ -26,7 +27,8 @@ class Button extends React.Component<TipProps, any> {
 		offsetBottom: 0,
 		visible: false,
 		onClose: () => {},
-		onClick: () => {}
+		onClick: () => {},
+		style: {}
 	};
 
 	constructor(props) {
@@ -70,7 +72,7 @@ class Button extends React.Component<TipProps, any> {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (!this.props.visible != nextProps.visible) {
+		if (this.props.visible != nextProps.visible) {
 			this.setState({
 				isVisible: nextProps.visible
 			});
@@ -101,14 +103,14 @@ class Button extends React.Component<TipProps, any> {
 	}
 
 	render() {
-		const { direction, offsetLeft, offsetBottom, offsetRight, offsetTop, children } = { ...this.props };
+		const { direction, style, offsetLeft, offsetBottom, offsetRight, offsetTop, children } = { ...this.props };
 		const isVisible = this.state.isVisible;
 
 		return (
 			<div
 				className="cube-tip"
 				data-dir={direction}
-				style={{ display: isVisible ? 'display' : 'none' }}
+				style={{ display: isVisible ? 'block' : 'none', ...style }}
 				onClick={this.handleClick.bind(this)}
 			>
 				<i className="cube-tip-angle" ref={(angle) => (this.angle = angle)} />
