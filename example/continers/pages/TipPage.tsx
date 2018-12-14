@@ -37,7 +37,7 @@ export default class ButtonPage extends React.Component<{}, any> {
 					>
 						Cube-React
 					</CubeButton>
-					<CubeTip {...tip} />
+					<CubeTip {...tip}>tips</CubeTip>
 				</div>
 			</div>
 		);
