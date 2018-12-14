@@ -16,7 +16,7 @@ export interface BasicProps {
 
 type TipProps = BasicProps;
 
-class Button extends React.Component<TipProps, any> {
+export default class Tip extends React.Component<TipProps, any> {
 	private angle;
 
 	static defaultProps = {
@@ -120,5 +120,3 @@ class Button extends React.Component<TipProps, any> {
 		);
 	}
 }
-
-export default Button;

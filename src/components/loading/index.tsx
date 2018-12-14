@@ -5,7 +5,7 @@ export interface LoadingProps {
 	size?: number;
 }
 
-class Button extends React.Component<LoadingProps, any> {
+export default class Loading extends React.Component<LoadingProps, any> {
 	render() {
 		const { size } = this.props;
 		let style = {};
@@ -26,5 +26,3 @@ class Button extends React.Component<LoadingProps, any> {
 		);
 	}
 }
-
-export default Button;

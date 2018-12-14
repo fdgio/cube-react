@@ -16,7 +16,7 @@ export interface BasicProps {
 
 type ButtonProps = React.ButtonHTMLAttributes<{}> & BasicProps;
 
-class Button extends React.Component<ButtonProps, any> {
+export default class Button extends React.Component<ButtonProps, any> {
 	static defaultProps = {
 		icon: '',
 		active: false,
@@ -49,5 +49,3 @@ class Button extends React.Component<ButtonProps, any> {
 		);
 	}
 }
-
-export default Button;
