@@ -105,12 +105,11 @@ export default class Tip extends React.Component<TipProps, any> {
 	render() {
 		const { direction, style, offsetLeft, offsetBottom, offsetRight, offsetTop, children } = { ...this.props };
 		const isVisible = this.state.isVisible;
-
 		return (
 			<div
 				className="cube-tip"
 				data-dir={direction}
-				style={{ display: isVisible ? 'block' : 'none', ...style }}
+				style={{ display: isVisible ? '' : 'none', ...style }}
 				onClick={this.handleClick.bind(this)}
 			>
 				<i className="cube-tip-angle" ref={(angle) => (this.angle = angle)} />
