@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "tslint -c tslint.json -t codeFrame 'src/**/*.tsx' 'src/**/*.ts' 'site/**/*.ts' 'site/**/*.tsx' 'example/**/*.tsx', 'example/**/*.ts'",
     "dev": "webpack --config scripts/webpack.config.js",
     "doc": "webpack-dev-server --config scripts/webpack.doc.js",
     "doc:dev": "cross-env BABEL_ENV=dev webpack-dev-server --config scripts/webpack.doc.js",
@@ -60,6 +61,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.1.6",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.0",
