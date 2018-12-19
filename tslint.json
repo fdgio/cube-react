@@ -2,5 +2,12 @@
   "extends": [
     "tslint:latest",
     "tslint-config-prettier"
-  ]
+  ],
+  "rules": {
+    "member-ordering": false,
+    "member-access": false,
+    "no-empty": false,
+    "object-literal-sort-keys": false,
+    "interface-name": false
+  }
 }
