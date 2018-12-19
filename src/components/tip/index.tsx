@@ -1,5 +1,4 @@
 import * as React from 'react';
-import classnames from 'classnames';
 import './index.styl';
 
 export interface BasicProps {
@@ -72,7 +71,7 @@ export default class Tip extends React.Component<TipProps, any> {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (this.props.visible != nextProps.visible) {
+		if (this.props.visible !== nextProps.visible) {
 			this.setState({
 				isVisible: nextProps.visible
 			});
