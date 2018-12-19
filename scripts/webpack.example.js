@@ -31,8 +31,17 @@ module.exports = {
       test: /\.(styl|css)$/,
       loader: ['style-loader', 'css-loader', 'stylus-loader']
     }, {
-      test: /\.(png|jpg|gif|woff|svg|eot|ttf)$/,
+      test: /\.(png|jpg|gif)$/,
       use: ['file-loader']
+    }, {
+      test: /\.(woff2?|eot|ttf|otf)$/,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 81920,
+          name: "[name]-[hash].[ext]"
+        }
+      }]
     }]
   },
   resolve: {
