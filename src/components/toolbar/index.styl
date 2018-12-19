@@ -1,0 +1,52 @@
+  @require "../../common/stylus/variable.styl"
+  @require "../../common/stylus/mixin.styl"
+  $toolbar-spacing = 10px
+  .cube-toolbar
+    position: fixed
+    left: $toolbar-spacing
+    right: $toolbar-spacing
+    bottom: $toolbar-spacing
+    z-index: 2
+    safe-area-mixin(padding-bottom, bottom)
+  .cube-toolbar-group
+    display: flex
+    height: 44px
+    overflow: hidden
+    box-sizing: border-box
+    border-radius: 2px
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .24)
+    background-color: $toolbar-bgc
+  .cube-toolbar-group-more
+    margin-bottom: $toolbar-spacing
+    .cube-toolbar-item
+      &:last-child
+        .cube-toolbar-down
+          position: absolute
+          top: 44px
+          right: 9%
+          height: $toolbar-spacing
+          color: $toolbar-bgc
+          font-size: $fontsize-large-xxx
+          font-family: cube-icon
+          font-style: normal
+          text-shadow: 0 1px 3px $toolbar-active-bgc
+          transform: scale(1.3)
+          &::before
+            content: "\E603"
+            position: relative
+            top: -10px
+          &::after
+            content: ""
+            display: block
+            position: absolute
+            left: 30%
+            top: 50%
+            margin-top: -6px
+            width: 40%
+            height: 2px
+            background-color: $toolbar-bgc
+        &:active
+          .cube-toolbar-down
+            color: $toolbar-active-bgc
+            &::after
+              background-color: $toolbar-active-bgc
