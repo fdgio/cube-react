@@ -1,0 +1,47 @@
+  @require "../../common/stylus/variable.styl"
+  @require "../../common/stylus/mixin.styl"
+  .cube-input
+    display: flex
+    align-items: center
+    font-size: $fontsize-medium
+    line-height: 1.429
+    background-color: $input-bgc
+    border-1px($input-border-color)
+  .cube-input-field
+    display: block
+    flex: 1
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    color: $input-color
+    line-height: inherit
+    background-color: inherit
+    border-radius: 2px
+    outline: none
+    &::-webkit-input-placeholder
+      color: $input-placeholder-color
+      text-overflow: ellipsis
+    + .cube-input-append
+      .cube-input-clear, .cube-input-eye
+        &:first-child
+          margin-left: -5px
+  .cube-input_active
+    &::after
+      border-color: $input-focus-border-color
+  .cube-input-prepend, .cube-input-append
+    display: flex
+    align-items: center
+  .cube-input-clear, .cube-input-eye
+    width: 1em
+    height: 1em
+    line-height: 1
+    padding: 10px
+    box-sizing: content-box
+    color: $input-clear-icon-color
+    > i
+      display: inline-block
+      transform: scale(1.2)
+  .cube-input-eye
+    >
+      .cubeic-eye-invisible, .cubeic-eye-visible
+        transform: scale(1.4)
