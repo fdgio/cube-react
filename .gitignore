@@ -9,7 +9,7 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+# Icon
 
 # Thumbnails
 ._*
@@ -125,5 +125,3 @@ lib
 .fusebox/
 
 # End of https://www.gitignore.io/api/macos,node
-
-lib
