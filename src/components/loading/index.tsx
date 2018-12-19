@@ -15,8 +15,10 @@ export default class Loading extends React.Component<LoadingProps, any> {
 				height: `${size}px`
 			};
 		}
-		let arr = [];
-		for (let i = 0; i < 12; i++) arr.push(1);
+		const arr = [];
+		for (let i = 0; i < 12; i++) {
+			arr.push(1);
+		}
 		return (
 			<div className="cube-loading">
 				<span className="cube-loading-spinners" style={style}>

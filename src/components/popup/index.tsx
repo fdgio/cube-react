@@ -17,7 +17,7 @@ interface BasicProps {
 
 type PopupProps = React.BaseHTMLAttributes<any> & BasicProps;
 
-export default class popup extends React.Component<PopupProps, any> {
+export default class Popup extends React.Component<PopupProps, any> {
 	static defaultProps = {
 		type: '',
 		mask: true,
@@ -60,7 +60,6 @@ export default class popup extends React.Component<PopupProps, any> {
 
 	componentDidMount() {
 		const visible = this.props.visible;
-		debugger;
 		if (visible) {
 			this.show();
 		} else {
@@ -92,7 +91,7 @@ export default class popup extends React.Component<PopupProps, any> {
 		};
 		let containerClass: string = '';
 		if (position) {
-			containerClass = 'cube-popup-${position}';
+			containerClass = `cube-popup-${position}`;
 		} else if (center) {
 			containerClass = 'cube-popup-center';
 		}
