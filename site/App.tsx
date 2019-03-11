@@ -8,6 +8,7 @@ import NotFound from './pages/404';
 import 'normalize.css';
 import 'github-markdown-css';
 import './index.styl';
+
 export default class App extends React.Component<{}, any> {
 	render() {
 		return (

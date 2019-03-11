@@ -16,7 +16,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: ['/node_modules/'],
         include: path.resolve(__dirname, '../site'),
-        loader: ['babel-loader', 'awesome-typescript-loader']
+        loader: ['babel-loader']
       },
       {
         test: /\.jsx?$/,
@@ -59,6 +59,7 @@ module.exports = {
     compress: true,
     port: 10000,
     hot: true,
+    open: true,
     historyApiFallback: true
   }
 };

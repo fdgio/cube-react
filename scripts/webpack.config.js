@@ -11,10 +11,8 @@ module.exports = {
   module: {
     rules: [{
       test: /.tsx?$/,
-      exclude: [
-        path.resolve(__dirname, '../node_modules'),
-      ],
-      loader: ['babel-loader', 'awesome-typescript-loader'],
+      exclude: /node_modules/,
+      loader: ['babel-loader'],
     }, {
       test: /\.s?css$/,
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
@@ -26,7 +24,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.jsx', '.tsx']
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'cube-react.css'

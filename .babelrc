@@ -1,27 +1,11 @@
 {
-  "env": {
-    "prod": {
-      "presets": [
-        ["@babel/preset-env"],
-        ["@babel/preset-react"]
-      ],
-      "plugins": [
-        ["@babel/plugin-proposal-object-rest-spread"],
-        ["no-debugging", {
-          "console": true,
-          "debugger": true,
-          "alert": true
-        }]
-      ]
-    },
-    "dev": {
-      "presets": [
-        ["@babel/preset-env"],
-        ["@babel/preset-react"]
-      ],
-      "plugins": [
-        ["@babel/plugin-proposal-object-rest-spread"]
-      ]
-    }
-  }
+  "presets": [
+    ["@babel/preset-env"],
+    ["@babel/preset-react"],
+    ["@babel/preset-typescript"]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-object-rest-spread"],
+    ["@babel/plugin-proposal-class-properties"]
+  ]
 }
