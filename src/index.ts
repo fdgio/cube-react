@@ -3,7 +3,8 @@ import CubeLoading from './components/loading';
 import CubePopup from './components/popup';
 import CubeTip from './components/tip';
 
-const VERSION = '0.0.1';
-/* tslint:disable-next-line */
-console.log(VERSION);
-export { VERSION, CubeButton, CubeLoading, CubePopup, CubeTip };
+import PKG from '../package.json'
+
+const { version } = PKG
+
+export { version, CubeButton, CubeLoading, CubePopup, CubeTip };

@@ -8,7 +8,7 @@ module.exports = {
       exclude: [
         path.resolve(__dirname, '../node_modules'),
       ],
-      loader: ['babel-loader', 'awesome-typescript-loader'],
+      loader: ['babel-loader'],
     }, {
       test: /\.s?css/,
       use: ['style-loader', 'css-loader', 'sass-loader']
