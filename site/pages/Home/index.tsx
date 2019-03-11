@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 // const logoImg = require('./imgs/logo.png');
 
 export default class Home extends React.Component<{}, any> {
-	public render(): React.ReactNode | null {
+	public render(): React.ReactNode {
 		return (
 			<section>
 				<Header />

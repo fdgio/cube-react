@@ -9,7 +9,8 @@
     "doc:dev": "webpack-dev-server --config scripts/webpack.doc.js",
     "example": "webpack-dev-server --config scripts/webpack.example.js",
     "lint": "tslint -c tslint.json -t codeFrame 'src/**/*.tsx' 'src/**/*.ts' 'site/**/*.ts' 'site/**/*.tsx' 'example/**/*.tsx', 'example/**/*.ts'",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -60,6 +61,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.2.0",
     "json-loader": "^0.5.7",
+    "lint-staged": "^8.1.5",
     "loader-utils": "^1.1.0",
     "markdown-loader": "^4.0.0",
     "mini-css-extract-plugin": "^0.4.5",
