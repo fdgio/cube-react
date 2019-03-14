@@ -2,7 +2,7 @@ const basic = {
   "presets": [
     ["@babel/preset-env", {
       "debug": true,
-      "modules": "cjs"
+      "modules": false
     }],
     ["@babel/preset-react"],
     ["@babel/preset-typescript"]
