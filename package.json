@@ -9,7 +9,8 @@
     "doc:dev": "webpack-dev-server --config scripts/webpack.doc.js",
     "example": "webpack-dev-server --config scripts/webpack.example.js",
     "lint": "tslint -c tslint.json -t codeFrame 'src/**/*.tsx' 'src/**/*.ts' 'site/**/*.ts' 'site/**/*.tsx' 'example/**/*.tsx', 'example/**/*.ts'",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -41,11 +42,15 @@
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-no-debugging": "^1.3.1",
     "commitlint": "^7.2.1",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-typescript": "^1.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -60,6 +65,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.2.0",
+    "jest": "^24.5.0",
     "json-loader": "^0.5.7",
     "lint-staged": "^8.1.5",
     "loader-utils": "^1.1.0",
