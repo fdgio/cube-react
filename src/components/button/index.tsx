@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import './index.styl';
 
@@ -10,14 +10,14 @@ export interface BasicProps {
 	primary?: boolean;
 	outline?: boolean;
 	light?: boolean;
-	type?: string;
+	type?: 'button' | 'submit' | 'reset';
 	onClick?: (e?: MouseEvent) => void;
 }
 
 type ButtonProps = React.ButtonHTMLAttributes<{}> & BasicProps;
 
-export default class Button extends React.Component<ButtonProps, any> {
-	static defaultProps = {
+export default class Button extends React.Component<ButtonProps> {
+	private static defaultProps: BasicProps = {
 		icon: '',
 		active: false,
 		disabled: false,
@@ -29,9 +29,9 @@ export default class Button extends React.Component<ButtonProps, any> {
 		onClick: () => {}
 	};
 
-	render() {
+	public render(): React.ReactNode {
 		const { props } = this;
-		const { icon, active, disabled, inline, primary, outline, light, type, onClick } = props;
+		const { icon, active, disabled, inline, primary, outline, light, type, onClick, children } = props;
 		const classes = classnames({
 			'cube-btn_active': active,
 			'cube-btn_disabled': disabled,
@@ -44,7 +44,7 @@ export default class Button extends React.Component<ButtonProps, any> {
 		return (
 			<button className={`${classes} cube-btn`} type={type} onClick={(e) => !disabled && onClick(e)}>
 				{icon && <i className={icon} />}
-				{this.props.children}
+				{children}
 			</button>
 		);
 	}
