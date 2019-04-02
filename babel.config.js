@@ -1,8 +1,7 @@
 const basic = {
   "presets": [
     ["@babel/preset-env", {
-      "debug": true,
-      "modules": false
+      "modules": "cjs"
     }],
     ["@babel/preset-react"],
     ["@babel/preset-typescript"]
@@ -15,8 +14,8 @@ const basic = {
 }
 
 module.exports = function babel(api) {
-  if(api.env('test')) {
-    basic.presets[0][1].modules = 'cjs'
+  if(api.env('production')) {
+    basic.presets[0][1].modules = false
   }
   return basic;
 }

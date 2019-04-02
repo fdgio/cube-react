@@ -1,0 +1,24 @@
+- key: overview
+  name: 概览
+  subs:
+    - key: README
+      name: 使用
+    - key: develop
+      name: 开发指南
+    - key: guide
+      name: 规范
+    - key: theme
+      name: 自定义主题
+- key: components
+  name: 组件
+  subs:
+    - key: 'basic'
+      name: '基础'
+      subs:
+        - key: button
+          name: Button 按钮
+    - key: 'form'
+      name: '表单'
+      subs:
+        - key: 'checkbox'
+          name: Checkbox

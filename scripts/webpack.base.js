@@ -28,6 +28,7 @@ module.exports = {
   ],
   externals: {
     react: 'react',
-    "react-dom": 'react-dom'
+    "react-dom": 'react-dom',
+    "cube-react": path.join(__dirname, '../src/index.ts')
   }
 };

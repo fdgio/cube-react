@@ -2,7 +2,8 @@
   "parser": "@typescript-eslint/parser",
   "env": {
     "jest": true,
-    "node": true
+    "node": true,
+    "browser": true
   },
   "extends": ["airbnb-typescript", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "prettier", "prettier/react", "prettier/@typescript-eslint"],
   "plugins": ["@typescript-eslint", "react"],
@@ -13,8 +14,13 @@
     }
   },
   "rules": {
+    "jsx-a11y": 0,
     "react/prefer-stateless-function": 0,
     "react/button-has-type": 0,
-    "import/no-extraneous-dependencies": 0
+    "react/no-danger": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-dynamic-require": 0,
+    "global-require": 0,
+    "@typescript-eslint/no-var-requires": 0
   }
 }

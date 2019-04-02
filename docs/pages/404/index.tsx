@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const PureComponent = React.PureComponent;
+const {PureComponent} = React;
 
 export default class NotFound extends PureComponent {
 	render() {

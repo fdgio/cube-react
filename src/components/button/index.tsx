@@ -42,7 +42,7 @@ export default class Button extends React.Component<ButtonProps> {
 			'cube-btn-light': light
 		});
 		return (
-			<button className={`${classes} cube-btn`} type={type} onClick={(e) => !disabled && onClick(e)}>
+			<button className={`${classes} cube-btn`} type={type} onClick={(e) => disabled || onClick(e)}>
 				{icon && <i className={icon} />}
 				{children}
 			</button>

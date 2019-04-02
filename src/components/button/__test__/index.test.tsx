@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Button from '../index.tsx';
+import Button from '../index';
 
-describe('MyComponent', () => {
-  it('should render correctly in "debug" mode', () => {
+describe('Button', () => {
+  it('should render correctly', () => {
     const component = shallow(<Button />);
     expect(component).toMatchSnapshot();
   });
