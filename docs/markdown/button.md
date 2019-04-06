@@ -7,36 +7,41 @@
 - 按钮类型
 
   默认类型为 `button`，还可设置为 `submit` 用于表单中
-  ```jsx
-  import { Button } from 'zarm';
-  
-  <Button>Button</Button>
-  <Button type="submit">Submit Button</Button>gg
-  ```
+
+```jsx
+import { Button } from 'cube-react';
+
+class Demo extends React.Component {
+  render() {
+    return <Button >Worked hard</Button>
+  }
+}
+ReactDOM.render( <Demo/> , mountNode);  
+```
 
 - 按钮状态
 
   默认正常，可设置激活、禁用状态
-  ```jsx
+  <!-- ```jsx
   <Button active>Active Button</Button>
   <Button disabled>Disabled Button</Button>
-  ```
+  ``` -->
 - 图标
 
   可设置 icon 的 class
-  ```jsx
+  <!-- ```jsx
   <Button icon="cubeic-right">Button With Icon</Button>
-  ```
+  ``` -->
 
 - 样子
 
   可以通过设置 `light`、`inline`、`outline`、`primary` 属性来改变按钮样子
-  ```jsx
+  <!-- ```jsx
   <Button light>Light Button</Button>
   <Button inline>Inline Button</Button>
   <Button outline>Outline Button</Button>
   <Button primary>Primary Button</Button>
-  ```
+  ``` -->
 
 ### Props 配置
 

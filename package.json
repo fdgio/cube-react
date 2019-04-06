@@ -9,7 +9,7 @@
     "doc:dev": "webpack-dev-server --config scripts/webpack.doc.js",
     "example": "webpack-dev-server --config scripts/webpack.example.js",
     "lint": "tslint -c tslint.json -t codeFrame 'src/**/*.tsx' 'src/**/*.ts' 'site/**/*.ts' 'site/**/*.tsx' 'example/**/*.tsx', 'example/**/*.ts'",
-    "type-check": "tsc",
+    "type-check": "tsc --watch",
     "test": "jest"
   },
   "repository": {

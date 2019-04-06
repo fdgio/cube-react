@@ -12,13 +12,13 @@
 - key: components
   name: 组件
   subs:
-    - key: 'basic'
-      name: '基础'
+    - key: basic
+      name: 基础
       subs:
         - key: button
           name: Button 按钮
-    - key: 'form'
-      name: '表单'
+    - key: form
+      name: 表单
       subs:
-        - key: 'checkbox'
+        - key: checkbox
           name: Checkbox

@@ -3,11 +3,9 @@ const path = require('path')
 
 const markdownCompilerPath = path.resolve(__dirname, './core.js')
 
-module.exports =  function mdLoader() {
-  // const options = getOptions(this);
+module.exports = function mdLoader() {
   const filePath = this.resourcePath;
 
-  // validateOptions(schema, options, 'Example Loader');
   const result =
     `module.exports = require(${
     loaderUtils.stringifyRequest(

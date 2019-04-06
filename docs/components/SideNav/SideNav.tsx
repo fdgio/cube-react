@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-
+import classnames from 'classnames';
 import './index.styl';
 
 interface SideNavProps {
@@ -23,11 +23,11 @@ export default class SideNav extends React.Component<SideNavProps> {
                 nav.subs
               ?
                 <Fragment>
-                  <p className="nav-li" onClick={nav => this.derial(nav)}>{nav.name}</p>
+                  <p className="nav-name" onClick={nav => this.derial(nav)}>{nav.name}</p>
                   <SideNav data={nav.subs} />
                 </Fragment>
               :
-                <Link to={nav.key}></Link>
+                <Link to={`/docs/${nav.key}`}></Link>
               }
               {nav.angle && <span  className="angle">{ nav.angle }</span>}
               {nav.angle && <div className="arrow"></div>}

@@ -36,15 +36,27 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        use: path.resolve(__dirname, './docs')
+        oneOf: [
+          {
+            resourceQuery: /render/,
+            use: path.resolve(__dirname, './docs')
+          },
+          {
+            use: ['html-loader', 'markdown-loader']
+          }
+        ]
         // use: ['html-loader', 'markdown-loader']
-      }
+      },
+      {
+        test: /\.yml$/,
+        loader: ['json-loader', 'yaml-loader']
+      },
     ]
   },
   resolve: {
     extensions: ['.ts', '.js', '.jsx', '.tsx', '.styl', '.scss', '.css', 'md'],
     alias: {
-      "cube-react": path.join(__dirname, '../src/index.ts')
+      "cube-react": require.resolve('../src/index.ts')
     }
   },
   devtool: 'source-map',
