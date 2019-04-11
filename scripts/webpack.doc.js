@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
@@ -39,10 +38,14 @@ module.exports = {
         oneOf: [
           {
             resourceQuery: /render/,
-            use: path.resolve(__dirname, './docs')
+            use: path.resolve(__dirname, './loaders/example')
           },
           {
-            use: ['html-loader', 'markdown-loader']
+            use: [
+              'html-loader',
+              path.resolve(__dirname, './loaders/doc')
+              // 'markdown-loader'
+            ]
           }
         ]
         // use: ['html-loader', 'markdown-loader']
@@ -54,7 +57,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.js', '.jsx', '.tsx', '.styl', '.scss', '.css', 'md'],
+    extensions: ['.ts', '.js', '.jsx', '.tsx', '.styl', '.scss', '.css', '.md', '.yml'],
     alias: {
       "cube-react": require.resolve('../src/index.ts')
     }
