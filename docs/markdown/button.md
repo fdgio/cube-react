@@ -4,11 +4,12 @@
 
 ### 示例
 
-::: title
 - 按钮类型 
-:::
+
 
   默认类型为 `button`，还可设置为 `submit` 用于表单中
+
+::: demo 按钮类型
 
 ```jsx
 import { Button } from 'cube-react';
@@ -20,7 +21,7 @@ class Demo extends React.Component {
 }
 ReactDOM.render( <Demo/> , mountNode);  
 ```
-
+:::
 - 按钮状态
 
   默认正常，可设置激活、禁用状态

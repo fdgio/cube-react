@@ -12,18 +12,13 @@ const md = require('markdown-it')({
   }
 })
 
-md.use(MarkDownItContainer, 'title', {
+md.use(MarkDownItContainer, 'demo', {
 
   validate(params) {
-    return params.trim().match(/^title$/);
+    return params.trim().match(/^demo\s+(.+)$/);
   },
 
   render() {
-    // for (let i = idx; i < tokens.length; i++) {
-    //   if (tokens[i].nesting === 0) {
-    //     return `<h2>${ tokens[i].content  }</h2>\n`
-    //   }
-    // }
     return ''
   }
 });

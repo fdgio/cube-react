@@ -1,23 +1,18 @@
 const md = require('markdown-it')()
 const MarkDownItContainer = require('markdown-it-container')
 
-md.use(MarkDownItContainer, 'title')
+md.use(MarkDownItContainer, 'demo')
 module.exports = function extractor(source) {
   const tokens = md.parse(source)
   const nodes = [];
-
-  tokens.forEach((token, i) => {
-    const { tag, info, content} = token
-    if (tag === 'div' && info.trim() === 'title') {
-      for(let j = i + 1; j < tokens.length; j++) {
-        if(tokens[j].nesting === 0) {
-          nodes.push({
-            type: 'title',
-            content: tokens[j].content
-          })
-          break;
-        }
-      }
+  tokens.forEach((token) => {
+    const { tag, info, content } = token
+    const matched = info.trim().match(/^demo\s+(.+)/)
+    if(matched) {
+      nodes.push({
+        type: 'title',
+        content: matched[1]
+      })
     }
     if(tag === 'code' && info === 'jsx') {
       nodes.push({
