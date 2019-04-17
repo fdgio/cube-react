@@ -33,8 +33,7 @@ export default class ExamplePages extends React.Component {
 module.exports = function core(source) {
   const nodes = extractor(source);
   const funcCompoents = nodes.filter(node => node.type === 'code').map(node => generator(node.content)).join(',')
-  const titles = nodes.map(node => node.type === 'title' ? node.content : '')
-
+  const titles = nodes.filter(node => node.type === 'title').map((node) => node.content)
   const result = template(funcCompoents, JSON.stringify(titles))
   return result;
 }

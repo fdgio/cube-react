@@ -25,26 +25,67 @@ ReactDOM.render( <Demo/> , mountNode);
 - 按钮状态
 
   默认正常，可设置激活、禁用状态
-  <!-- ```jsx
-  <Button active>Active Button</Button>
-  <Button disabled>Disabled Button</Button>
-  ``` -->
+
+::: demo 按钮状态
+```jsx
+import { Button } from 'cube-react';
+
+class Demo2 extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button active>Active Button</Button>
+        <Button disabled>Disabled Button</Button>
+      </div>
+    )
+  }
+}
+ReactDOM.render( <Demo2/> , mountNode);  
+```
+:::
+
 - 图标
 
   可设置 icon 的 class
-  <!-- ```jsx
-  <Button icon="cubeic-right">Button With Icon</Button>
-  ``` -->
+
+::: demo 图标
+```jsx
+import { Button } from 'cube-react';
+
+class Demo2 extends React.Component {
+  render() {
+    return (
+     <Button icon="cubeic-right">Button With Icon</Button>
+    )
+  }
+}
+ReactDOM.render( <Demo2/> , mountNode);  
+```
+:::
 
 - 样子
 
   可以通过设置 `light`、`inline`、`outline`、`primary` 属性来改变按钮样子
-  <!-- ```jsx
-  <Button light>Light Button</Button>
-  <Button inline>Inline Button</Button>
-  <Button outline>Outline Button</Button>
-  <Button primary>Primary Button</Button>
-  ``` -->
+
+::: demo 样子
+```jsx
+import { Button } from 'cube-react';
+
+class Demo2 extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button light>Light Button</Button>
+        <Button inline>Inline Button</Button>
+        <Button outline>Outline Button</Button>
+        <Button primary>Primary Button</Button>
+      </div>
+    )
+  }
+}
+ReactDOM.render( <Demo2/> , mountNode);  
+```
+:::
 
 ### Props 配置
 
